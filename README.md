@@ -2,8 +2,8 @@
 
 # Shopware 6.5 Plugin form with pdf file upload
 
-With this plugin, you have a form the user can upload a pdf file after that data saves in the shop database instead of sending it via mail..
-
+With this plugin, you have a form the user can upload a pdf file.
+After that data storage in the shop database instead of sending it via mail.
 ##Storefront
 ![](src/Resources/config/images/storefront_form_1.jpg)
 
