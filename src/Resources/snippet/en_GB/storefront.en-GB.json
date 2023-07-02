@@ -1,0 +1,38 @@
+{
+  "sas-custom-form": {
+    "cms-block": {
+      "custom-form": {
+        "first-name": "First Name",
+        "last-name": "Last Name",
+        "phone-number": "Phone Number",
+        "company": "Company",
+        "email": "Email",
+        "street": "Street",
+        "street-number": "Street number",
+        "postal-code": "Postal Code",
+        "country": "Country",
+        "city": "City",
+        "description": "Description",
+        "choose-file": "Choose file",
+        "submit": "Submit",
+        "message": {
+          "success": "Thank you! Your request has been submitted.",
+          "danger": "Please only upload files that end in type .pdf",
+          "empty": "Fields with an asterisk must be filled out"
+        },
+        "placeholder": {
+          "first_name": "Tomas",
+          "last_name": "Markus",
+          "phone_number": "+49(0)77777777",
+          "company": "BMW",
+          "email": "test@test.com",
+          "country": "Germany",
+          "city": "Hufingen",
+          "postal_code": "12345",
+          "street_number": "10",
+          "street": "test street"
+        }
+      }
+    }
+  }
+}

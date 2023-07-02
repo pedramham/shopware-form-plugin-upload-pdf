@@ -1,0 +1,30 @@
+{% block sas_custom_form %}
+    <sw-page class="sas-custom-form">
+        <template slot="smart-bar-header">
+            <h2>
+                {% block sas_custom_form_list_smart_bar_header_title_text %}
+                    {{ $tc('sas-custom-form.page.list.title') }}
+                {% endblock %}
+                {% block sas_custom_form_smart_bar_header_amount %}
+                    <span v-if="!isLoading" class="sw-page__smart-bar-amount">
+                    ({{ total }})
+                </span>
+                {% endblock %}
+            </h2>
+        </template>
+
+        <template slot="content">
+            {% block sas_custom_form_list_content %}
+                <sw-entity-listing
+                    v-if="customForm"
+                    :items="customForm"
+                    :repository="repository"
+                    :showSelection="false"
+                    :columns="columns"
+                    detailRoute="sas.custom.form.detail">
+                </sw-entity-listing>
+            {% endblock %}
+        </template>
+
+    </sw-page>
+{% endblock %}

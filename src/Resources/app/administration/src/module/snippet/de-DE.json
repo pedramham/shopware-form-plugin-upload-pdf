@@ -1,0 +1,48 @@
+{
+  "sas-custom-form": {
+    "blocks": {
+      "label": "Custom Form",
+      "component": {
+        "title": "Custom Form",
+        "action": "Einreichen",
+        "browser": "Browser"
+      },
+      "preview": {
+        "title": "Custom Form",
+        "action": "Einreichen"
+      }
+    },
+    "custom-form": {
+      "name": "Custom Form",
+      "descriptionTextModule": "Custom Form",
+      "list": {
+        "title": "Liste",
+        "table": {
+          "name": "Name",
+          "company": "Firma",
+          "email": "E-Mail"
+        }
+      },
+      "details": {
+        "button": {
+          "back": "Zurück"
+        },
+        "field": {
+          "firstName": "Vorname",
+          "lastName": "Nachname",
+          "email": "E-Mail",
+          "phoneNumber": "Rufnummer",
+          "company": "Firma",
+          "street": "Straße",
+          "streetNumber": "Straße Nummer",
+          "postalCode": "Postleitzahl",
+          "country": "Land",
+          "city": "Stadt",
+          "description": "Beschreibung",
+          "file": "file",
+          "download": "Herunterladen"
+        }
+      }
+    }
+  }
+}

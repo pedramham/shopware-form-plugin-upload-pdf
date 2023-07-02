@@ -1,0 +1,20 @@
+{
+  "name": "sas/custom-form",
+  "description": "Plugin form with pdf file upload",
+  "type": "shopware-platform-plugin",
+  "version": "1",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Sas\\CustomForm\\": "src/"
+    }
+  },
+  "extra": {
+    "plugin-icon": "src/Resources/config/plugin.png",
+    "shopware-plugin-class": "Sas\\CustomForm\\SasCustomForm",
+    "label": {
+      "de-DE": "Plugin form with pdf file upload",
+      "en-GB": "Plugin form with pdf file upload"
+    }
+  }
+}

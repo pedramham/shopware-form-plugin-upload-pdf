@@ -1,0 +1,129 @@
+{% block sas_custom_form_detail %}
+    <sw-page class="sas-custom-form-detail" :isLoading="isLoading">
+        <template #smart-bar-header>
+            <h2 v-html="customForm ? customForm.firstName : 'Custom Form'"></h2>
+        </template>
+
+        {% block sas_custom_form_detail_smart_bar_actions %}
+            <template #smart-bar-actions>
+                {% block sas_custom_form_list_smart_bar_actions_about %}
+                    <sw-button :disabled="customForm && customForm.isLoading" @click="onCancel">
+                        {{ $tc('sas-custom-form.page.details.button.back') }}
+                    </sw-button>
+                {% endblock %}
+            </template>
+        {% endblock %}
+
+        <template #content>
+            <sw-container class="sas-custom-form-detail-container" v-if="customForm">
+
+                {% block sas_custom_form_detail_card %}
+                    <sw-card>
+                        <sw-container columns="1fr 1fr" gap="20px">
+                            <sw-text-field
+                                    disabled
+                                    v-model="customForm.firstName"
+                                    required
+                                    :label="$tc('sas-custom-form.page.details.field.firstName')">
+                            </sw-text-field>
+                            <sw-text-field
+                                    disabled
+                                    v-model="customForm.lastName"
+                                    required
+                                    :label="$tc('sas-custom-form.page.details.field.lastName')">
+                            </sw-text-field>
+                        </sw-container>
+
+                        <sw-container columns="1fr 1fr" gap="20px">
+                            <sw-text-field
+                                    disabled
+                                    v-model="customForm.phoneNumber"
+                                    :label="$tc('sas-custom-form.page.details.field.phoneNumber')">
+                            </sw-text-field>
+                            <sw-text-field
+                                    disabled
+                                    v-model="customForm.company"
+                                    required
+                                    :label="$tc('sas-custom-form.page.details.field.company')">
+                            </sw-text-field>
+                        </sw-container>
+
+                        <sw-container columns="1fr 1fr" gap="20px">
+                            <sw-text-field
+                                    disabled
+                                    v-model="customForm.email"
+                                    required
+                                    :label="$tc('sas-custom-form.page.details.field.email')">
+                            </sw-text-field>
+                        </sw-container>
+                    </sw-card>
+
+                    <sw-card>
+                        <sw-container columns="1fr 1fr" gap="20px">
+                            <sw-text-field
+                                    disabled
+                                    v-model="customForm.street"
+                                    :label="$tc('sas-custom-form.page.details.field.street')">
+                            </sw-text-field>
+                            <sw-text-field
+                                    v-model="customForm.streetNumber"
+                                    disabled
+                                    :label="$tc('sas-custom-form.page.details.field.streetNumber')">
+                            </sw-text-field>
+                        </sw-container>
+
+                        <sw-container columns="1fr 1fr" gap="20px">
+                            <sw-text-field
+                                    disabled
+                                    v-model="customForm.postalCode"
+                                    :label="$tc('sas-custom-form.page.details.field.postalCode')">
+                            </sw-text-field>
+                            <sw-text-field
+                                    disabled
+                                    v-model="customForm.country"
+                                    :label="$tc('sas-custom-form.page.details.field.country')">
+                            </sw-text-field>
+                        </sw-container>
+
+                        <sw-container columns="1fr 1fr" gap="20px">
+                            <sw-text-field
+                                    disabled
+                                    v-model="customForm.city"
+                                    :label="$tc('sas-custom-form.page.details.field.city')">
+                            </sw-text-field>
+                        </sw-container>
+                    </sw-card>
+
+                    <sw-card>
+                        <sw-container>
+                            <sw-textarea-field
+                                    disabled
+                                    type="textarea"
+                                    v-model="customForm.description"
+                                    :label="$tc('sas-custom-form.page.details.field.description')">
+                            </sw-textarea-field>
+
+                            <sw-external-link
+                                    v-if="download"
+                                    class="sw-media-sidebar__quickaction"
+                                    :href="download"
+
+                            >
+                                <sw-icon
+                                        small
+                                        name="regular-cloud-download"
+                                        class="sw-media-sidebar__quickactions-icon"
+                                />
+                                {{ $tc('sw-media.sidebar.actions.download') }}
+                            </sw-external-link>
+
+                        </sw-container>
+                    </sw-card>
+
+                {% endblock %}
+
+            </sw-container>
+        </template>
+
+    </sw-page>
+{% endblock %}

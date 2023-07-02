@@ -1,0 +1,43 @@
+@import "~scss/variables";
+
+.sw-cms-component-sas-custom-form {
+    padding: 15px;
+    overflow: auto;
+
+    .sw-cms-component-sas-custom-form-headline {
+        margin-bottom: 10px;
+        border-bottom: 1px solid $color-gray-300;
+        padding-bottom: 10px;
+    }
+
+    .sw-cms-component-sas-custom-form-inputs {
+        overflow: auto;
+
+        & > .sw-cms-component-sas-custom-form-input {
+            width: calc(50% - 7px);
+            float: left;
+
+            &:first-child {
+                margin-right: 14px;
+            }
+        }
+    }
+
+    .sw-cms-component-sas-custom-form-input {
+        margin-bottom: 10px;
+        height: 1.7em;
+        border-radius: 4px;
+        border: 1px solid $color-gray-300;
+    }
+
+    .sw-cms-component-sas-custom-form-inputs__action {
+        float: right;
+        padding: 0 10px;
+        background: $color-gray-300;
+        color: $color-darkgray-200;
+        text-align: center;
+        font-size: 12px;
+        line-height: 26px;
+        border-radius: 3px;
+    }
+}

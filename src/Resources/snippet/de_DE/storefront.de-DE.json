@@ -1,0 +1,38 @@
+{
+  "sas-custom-form": {
+    "cms-block": {
+      "custom-form": {
+        "first-name": "Name",
+        "last-name": "Vorname",
+        "phone-number": "Telefonnummer",
+        "company": "Firma",
+        "email": "E-Mail",
+        "street": "Straße",
+        "street-number": "Hausnummer",
+        "postal-code": "PLZ",
+        "country": "Land",
+        "city": "Stadt",
+        "description": "Beschreibung",
+        "choose-file": "Datei wählen",
+        "submit": "Absenden",
+        "message": {
+          "success": "Vielen Dank. Ihre Anfrage wurde gesendet.",
+          "danger": "Bitte laden Sei nur Dateien vom Typ .pdf hoch",
+          "empty": "Fields with asterisks must be completed"
+        },
+        "placeholder": {
+          "first_name": "Tomas",
+          "last_name": "Markus",
+          "phone_number": "+49(0)77777777",
+          "company": "BMW",
+          "email": "test@test.com",
+          "country": "Deutschland",
+          "city": "Hüfingen",
+          "postal_code": "12345",
+          "street_number": "10",
+          "street": "Test straße"
+        }
+      }
+    }
+  }
+}

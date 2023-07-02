@@ -1,0 +1,54 @@
+.sas-custom-form {
+
+    .custom-form-block {
+        display: grid;
+        grid-template-columns: 25% 70%;
+        grid-gap: 5px;
+        justify-content: space-between;
+        .custom-form-label {
+            font-size: 0.875rem;
+            word-break: break-all;
+        }
+    }
+
+}
+@media only screen and (max-width: 991px) {
+    .sas-custom-form {
+
+        .custom-form-block {
+            grid-template-columns: 35% 60%;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .sas-custom-form {
+
+        .custom-form-block {
+            grid-template-columns: 25% 70%;
+            max-width: 100%;
+            flex: 100%;
+            margin-top: 1rem;
+            padding-top: 0 !important;
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    hr{
+        display: none;
+    }
+    .sas-custom-form {
+        margin-bottom: 2rem;
+        .custom-form-block {
+            display: flex;
+            flex-direction: column;
+            .custom-form-label {
+                padding-bottom: 0;
+            }
+        }
+        .btn-submit {
+            margin-top:1rem ;
+            text-align: center !important;
+        }
+    }
+}

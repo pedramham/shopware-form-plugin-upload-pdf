@@ -1,0 +1,211 @@
+{% block sw_cms_block_sas_custom_form %}
+    {% block custom_from %}
+        <div class="container pt-4">
+            {% block cms_content %}
+                <form action="{{ path('frontend.sas.custom.form') }}"
+                      class="sas-custom-form"
+                      id="custom_form"
+                      method="post"
+                      data-form-csrf-handler="false"
+                      data-form-csrf_protection="false"
+                      data-form-validation="true"
+                      data-form-ajax-submit="true"
+                      enctype="multipart/form-data"
+                >
+
+                    <div class="alert alert-danger alert-dismissible text-light font-weight-bold fade p-3 d-none"
+                         role="alert" id="alert-message-warning">
+                        <div id="message-alert-warning"></div>
+                    </div>
+
+                    <div class="alert alert-success alert-dismissible text-light font-weight-bold fade p-3 rounded"
+                         role="alert" id="alert-message-success">
+                        <div id="message-alert-success"></div>
+                    </div>
+
+                    <div class="row align-items-start pb-3">
+
+                        <div class="col-12 col-sm-6 custom-form-block">
+                            <label for="firstName" class="col-form-label custom-form-label">
+                                {{ "sas-custom-form.cms-block.custom-form.first-name"|trans|striptags }} <span
+                                        class="text-danger">*</span> :
+                            </label>
+                            <div class="custom-form-input">
+                                <input type="text"
+                                       name="first_name"
+                                       class="form-control"
+                                       id="firstName"
+                                       placeholder="{{ "sas-custom-form.cms-block.custom-form.placeholder.first_name"|trans|striptags }}"
+                                       minlength="2"
+                                       maxlength="50"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 custom-form-block">
+                            <label for="lastName" class="col-form-label custom-form-label">
+                                {{ "sas-custom-form.cms-block.custom-form.last-name"|trans|striptags }} <span
+                                        class="text-danger">*</span> :
+                            </label>
+                            <div class="custom-form-input">
+                                <input type="text"
+                                       name="last_name"
+                                       class="form-control"
+                                       id="lastName"
+                                       placeholder="{{ "sas-custom-form.cms-block.custom-form.placeholder.last_name"|trans|striptags }}"
+                                       minlength="2"
+                                       maxlength="50"
+                                       required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-start">
+                        <div class="col-12 col-sm-6 custom-form-block">
+                            <label for="phoneNumber" class="col-form-label custom-form-label">
+                                {{ "sas-custom-form.cms-block.custom-form.phone-number"|trans|striptags }} :
+                            </label>
+                            <div class="custom-form-input">
+                                <input type="tel"
+                                       name="phone_number"
+                                       class="form-control"
+                                       id="phoneNumber"
+                                       placeholder="{{ "sas-custom-form.cms-block.custom-form.placeholder.phone_number"|trans|striptags }}"
+                                       minlength="2"
+                                       maxlength="50">
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 custom-form-block">
+                            <label for="company" class="col-form-label custom-form-label">
+                                {{ "sas-custom-form.cms-block.custom-form.company"|trans|striptags }} <span
+                                        class="text-danger">*</span> :
+                            </label>
+                            <div class="custom-form-input">
+                                <input type="text"
+                                       name="company"
+                                       class="form-control"
+                                       id="company"
+                                       placeholder="{{ "sas-custom-form.cms-block.custom-form.placeholder.company"|trans|striptags }}"
+                                       minlength="2"
+                                       maxlength="100"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 pt-3 custom-form-block">
+                            <label for="email" class="col-form-label custom-form-label">
+                                {{ "sas-custom-form.cms-block.custom-form.email"|trans|striptags }} <span
+                                        class="text-danger">*</span> :
+                            </label>
+                            <div class="custom-form-input">
+                                <input type="email"
+                                       name="email"
+                                       class="form-control"
+                                       id="email"
+                                       placeholder="{{ "sas-custom-form.cms-block.custom-form.placeholder.email"|trans|striptags }}"
+                                       minlength="2"
+                                       maxlength="100"
+                                       required>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <hr>
+                    <div class="row align-items-start pb-3">
+                        <div class="col-12 col-sm-6 custom-form-block">
+                            <label for="country" class="col-form-label custom-form-label">
+                                {{ "sas-custom-form.cms-block.custom-form.country"|trans|striptags }} :</label>
+                            <input type="text"
+                                   name="country"
+                                   class="form-control"
+                                   id="country"
+                                   placeholder="{{ "sas-custom-form.cms-block.custom-form.placeholder.country"|trans|striptags }}"
+                                   minlength="2"
+                                   maxlength="80">
+                        </div>
+                        <div class="col-12 col-sm-6 custom-form-block">
+
+                            <label for="city" class="col-form-label custom-form-label">
+                                {{ "sas-custom-form.cms-block.custom-form.city"|trans|striptags }} :
+                            </label>
+                            <input type="text"
+                                   name="city"
+                                   class="form-control"
+                                   id="city"
+                                   placeholder="{{ "sas-custom-form.cms-block.custom-form.placeholder.city"|trans|striptags }}"
+                                   minlength="2"
+                                   maxlength="50">
+                        </div>
+                    </div>
+                    <div class="row align-items-start pb-3">
+                        <div class="col-12 col-sm-6 custom-form-block">
+                            <label for="postalCode" class="col-form-label custom-form-label">
+                                {{ "sas-custom-form.cms-block.custom-form.postal-code"|trans|striptags }} :</label>
+                            <input type="text"
+                                   name="postal_code"
+                                   class="form-control"
+                                   id="postalCode"
+                                   placeholder="{{ "sas-custom-form.cms-block.custom-form.placeholder.postal_code"|trans|striptags }}"
+                                   minlength="2"
+                                   maxlength="100">
+                        </div>
+                        <div class="col-12 col-sm-6 custom-form-block">
+                            <label for="streetNumber" class="col-form-label custom-form-label">
+                                {{ "sas-custom-form.cms-block.custom-form.street-number"|trans|striptags }} :</label>
+                            <input type="text"
+                                   name="street_number"
+                                   class="form-control"
+                                   id="streetNumber"
+                                   placeholder="{{ "sas-custom-form.cms-block.custom-form.placeholder.street_number"|trans|striptags }}"
+                                   minlength="2"
+                                   maxlength="100">
+                        </div>
+                    </div>
+                    <div class="row align-items-start pb-3">
+                        <div class="col-12 col-sm-6 custom-form-block">
+                            <label for="street" class="col-form-label custom-form-label">
+                                {{ "sas-custom-form.cms-block.custom-form.street"|trans|striptags }}:</label>
+                            <div class="custom-form-input">
+                                <input type="text"
+                                       name="street"
+                                       class="form-control"
+                                       id="street"
+                                       placeholder="{{ "sas-custom-form.cms-block.custom-form.placeholder.street"|trans|striptags }}"
+                                       minlength="2"
+                                       maxlength="254">
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <div class="row align-items-start pb-3">
+                        <div class="col-12">
+                            <label
+                                    for="description"><small>{{ "sas-custom-form.cms-block.custom-form.description"|trans|striptags }}</small></label>
+                            <textarea class="form-control" name="description" id="description" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-12 col-sm-6">
+                            <div class="custom-file">
+                                <input type="file" name="file" class="form-control" id="customFile"
+                                       accept="application/pdf">
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-sm-6 align-items-center text-right btn-submit"
+                             data-sas-custom-form>
+
+                            <button type="submit" class="btn btn-primary" id="custom-form-ajax-button" disabled>
+                                {{ "sas-custom-form.cms-block.custom-form.submit"|trans|striptags }}
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            {% endblock %}
+        </div>
+    {% endblock %}
+{% endblock %}
